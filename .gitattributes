@@ -1,0 +1,16 @@
+# 默认：文本文件按 LF 存放，避免跨平台协作时的行尾噪声
+* text=auto eol=lf
+
+# 显式声明：源码与示例都是 UTF-8（含中文注释），禁止 git 做编码转换
+*.py       text diff=python
+*.scm      text
+*.md       text
+*.txt      text
+
+# 二进制，别当文本处理
+*.pyz      binary
+*.pyc      binary
+
+# 让 diff 对中文更友好（GitHub 上按字符而非字节展示）
+*.py       diff
+*.md       diff
